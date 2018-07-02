@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="575.0" prefWidth="465.0" styleClass="background" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.createdoctor.javafx.controller.CreateDoctorController">
+
+    <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="11.0" layoutY="129.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="150.0" text="Voornaam:">
+      <font>
+         <Font size="12.0" />
+      </font></Label>
+    <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="11.0" layoutY="156.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" text="Achternaam:">
+      <font>
+         <Font size="12.0" />
+      </font></Label>
+    <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="11.0" layoutY="183.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" text="Telefoonnummer:">
+      <font>
+         <Font size="12.0" />
+      </font></Label>
+    <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="16.0" layoutY="216.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" text="Email: ">
+      <font>
+         <Font size="12.0" />
+      </font></Label>
+    <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="11.0" layoutY="245.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" text="Rijksregisternummer:">
+      <font>
+         <Font size="12.0" />
+      </font></Label>
+    <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="11.0" layoutY="280.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" text="RIZIV-nummer:">
+      <font>
+         <Font size="12.0" />
+      </font></Label>
+    <Label layoutX="56.0" layoutY="78.0" style="-fx-font-size: 20;" text="e-Health certificaat toevoegen aan UM" textAlignment="CENTER" textFill="#307cab" />
+    <TextField fx:id="txtFirstName" layoutX="166.0" layoutY="123.0" prefHeight="26.0" prefWidth="200.0" />
+    <TextField fx:id="txtLastName" layoutX="166.0" layoutY="150.0" prefHeight="26.0" prefWidth="200.0" />
+    <TextField fx:id="txtPhone" layoutX="166.0" layoutY="178.0" prefHeight="26.0" prefWidth="200.0" text="015258904" />
+    <TextField fx:id="txtEmail" layoutX="166.0" layoutY="210.0" prefHeight="26.0" prefWidth="200.0" text="support@somedi.be" />
+    <TextField fx:id="txtSSIN" layoutX="166.0" layoutY="240.0" prefHeight="26.0" prefWidth="200.0" />
+    <TextField fx:id="txtNIHII" layoutX="166.0" layoutY="274.0" prefHeight="26.0" prefWidth="200.0" />
+    <Label fx:id="lblStatus" layoutX="18.0" layoutY="428.0" prefHeight="16.0" prefWidth="436.0" textFill="#307cab" />
+    <Label fx:id="lblInfo" layoutX="19.0" layoutY="465.0" prefHeight="16.0" prefWidth="436.0" textFill="#307cab" wrapText="true" />
+   <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="11.0" layoutY="313.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" text="Wachtwoord certificaat:">
+      <font>
+         <Font size="12.0" />
+      </font></Label>
+   <TextField fx:id="txtCertificatePath" layoutX="166.0" layoutY="341.0" prefHeight="26.0" prefWidth="200.0" />
+   <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="11.0" layoutY="347.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" text="Pad naar certificaat:">
+      <font>
+         <Font size="12.0" />
+      </font></Label>
+    <Button layoutX="168.0" layoutY="376.0" mnemonicParsing="false" onAction="#createDoctor" prefHeight="35.0" prefWidth="200.0" text="Toevoegen" />
+    <ImageView fitHeight="109.0" fitWidth="200.0" layoutX="168.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/recip-e-logo.png" />
+    </ImageView>
+   <PasswordField fx:id="txtCertificatePassword" layoutX="166.0" layoutY="310.0" prefHeight="22.0" prefWidth="200.0" />
+   <Button layoutX="19.0" layoutY="526.0" mnemonicParsing="false" onAction="#lookUpDoctor" prefHeight="35.0" prefWidth="200.0" text="Zit dokter in DB? " />
+   <Label fx:id="lblLookUp" layoutX="255.0" layoutY="537.0" />
+</AnchorPane>
