@@ -55,6 +55,8 @@ public class CreateDoctorController {
     @FXML
     private Label lblLookUp;
     @FXML
+    private Label lblDeleteResult;
+    @FXML
     private PasswordField txtCertificatePassword;
     @FXML
     private TextField txtCertificatePath;
@@ -71,6 +73,16 @@ public class CreateDoctorController {
         } else {
             User user = userService.findbySsin(txtSSIN.getText());
             lblLookUp.setText(user != null ? "Dr. " + user.getLastName() + "(id:" + user.getId() + ") zit in de databank" : "Deze dokter zit niet in de databank");
+        }
+    }
+
+    @FXML
+    private void deleteDoctor(){
+        if (txtSSIN.getText() == null || txtSSIN.getText().equals("")) {
+            lblDeleteResult.setText("Rrn van de dokter is niet ingevuld!");
+        } else {
+            User user = userService.findbySsin(txtSSIN.getText());
+            lblDeleteResult.setText(userService.deleteUser(txtSSIN.getText()) ? "Dr. " + user.getLastName() + " zit niet meer in de databank" : "Dokter niet verwijderd!");
         }
     }
 

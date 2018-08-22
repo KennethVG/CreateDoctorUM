@@ -18,6 +18,9 @@ public class UserEntity {
     @Column(unique = true)
     private String ssin;
 
+    @OneToOne(mappedBy = "userEntity", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = false)
+    private CredentialEntity credentialEntity;
+
     public Long getId() {
         return id;
     }
@@ -64,5 +67,13 @@ public class UserEntity {
 
     public void setSsin(String ssin) {
         this.ssin = ssin;
+    }
+
+    public CredentialEntity getCredentialEntity() {
+        return credentialEntity;
+    }
+
+    public void setCredentialEntity(CredentialEntity credentialEntity) {
+        this.credentialEntity = credentialEntity;
     }
 }

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="575.0" prefWidth="465.0" styleClass="background" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.createdoctor.javafx.controller.CreateDoctorController">
+<AnchorPane prefHeight="658.0" prefWidth="465.0" styleClass="background" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.createdoctor.javafx.controller.CreateDoctorController">
 
     <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="11.0" layoutY="129.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="150.0" text="Voornaam:">
       <font>
@@ -43,7 +43,7 @@
     <TextField fx:id="txtSSIN" layoutX="166.0" layoutY="240.0" prefHeight="26.0" prefWidth="200.0" />
     <TextField fx:id="txtNIHII" layoutX="166.0" layoutY="274.0" prefHeight="26.0" prefWidth="200.0" />
     <Label fx:id="lblStatus" layoutX="18.0" layoutY="428.0" prefHeight="16.0" prefWidth="436.0" textFill="#307cab" />
-    <Label fx:id="lblInfo" layoutX="19.0" layoutY="465.0" prefHeight="16.0" prefWidth="436.0" textFill="#307cab" wrapText="true" />
+    <Label fx:id="lblInfo" layoutX="15.0" layoutY="473.0" prefHeight="16.0" prefWidth="436.0" textFill="#307cab" wrapText="true" />
    <Label alignment="BASELINE_RIGHT" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="11.0" layoutY="313.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" text="Wachtwoord certificaat:">
       <font>
          <Font size="12.0" />
@@ -60,4 +60,6 @@
    <PasswordField fx:id="txtCertificatePassword" layoutX="166.0" layoutY="310.0" prefHeight="22.0" prefWidth="200.0" />
    <Button layoutX="19.0" layoutY="526.0" mnemonicParsing="false" onAction="#lookUpDoctor" prefHeight="35.0" prefWidth="200.0" text="Zit dokter in DB? " />
    <Label fx:id="lblLookUp" layoutX="255.0" layoutY="537.0" />
+   <Button layoutX="19.0" layoutY="578.0" mnemonicParsing="false" onAction="#deleteDoctor" prefHeight="35.0" prefWidth="200.0" text="Verwijder dokter" />
+   <Label fx:id="lblDeleteResult" layoutX="255.0" layoutY="588.0" />
 </AnchorPane>
